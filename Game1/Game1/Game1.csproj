@@ -49,6 +49,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spelare.cs" />
+    <Compile Include="TexFiler.cs" />
     <Compile Include="Varelser.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,7 @@ namespace Game1
         protected Vector2 pos;
         protected int height;
         protected int width;
+        protected int iD;
 
         public virtual void Update() { }
 

@@ -11,6 +11,8 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Spelare tim;
+
 
         public Game1()
         {
@@ -29,6 +31,7 @@ namespace Game1
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            tim = new Spelare();
         }
 
         /// <summary>
@@ -39,7 +42,7 @@ namespace Game1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            TexFiler.Ladda(Content);
             // TODO: use this.Content to load your game content here
         }
 
@@ -74,6 +77,9 @@ namespace Game1
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
+            tim.Draw(spriteBatch);
+            spriteBatch.End();
 
             // TODO: Add your drawing code here
 

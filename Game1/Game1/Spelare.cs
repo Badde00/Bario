@@ -8,6 +8,11 @@ namespace Game1
 {
     class Spelare:Varelser
     {
-        
+        public Spelare()
+        {
+            tex = TexFiler.spelare;
+            width = tex.Width;
+            height = tex.Height;
+        }
     }
 }
