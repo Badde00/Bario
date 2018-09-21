@@ -12,6 +12,8 @@ namespace Game1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Spelare tim;
+        public static Viewport Viewport;
+        public static GameTime GameTime;
 
 
         public Game1()
@@ -32,6 +34,7 @@ namespace Game1
 
             base.Initialize();
             tim = new Spelare();
+            Viewport = GraphicsDevice.Viewport;
         }
 
         /// <summary>
@@ -62,9 +65,10 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            GameTime = gameTime;
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            tim.Update();
             // TODO: Add your update logic here
 
             base.Update(gameTime);
