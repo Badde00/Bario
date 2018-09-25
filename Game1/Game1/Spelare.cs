@@ -24,9 +24,9 @@ namespace Game1
         public override void Update()
         {
             KeyboardState newState = Keyboard.GetState();
-            if (newState.IsKeyDown(Keys.W) && lastState.IsKeyUp(Keys.W) && pos.Y + tex.Height == Game1.Viewport.Y)
+            if (newState.IsKeyDown(Keys.W) && lastState.IsKeyUp(Keys.W))
             {
-                velocity.Y -= 8;
+                velocity.Y -= 7;
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.S))

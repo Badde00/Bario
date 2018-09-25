@@ -11,10 +11,12 @@ namespace Game1
     static class TexFiler
     {
         public static Texture2D spelare;
+        public static Texture2D plattform;
         
         public static void Ladda(ContentManager contMan)
         {
             spelare = contMan.Load<Texture2D>(@"Spel-filer\Gubbe1");
+            plattform = contMan.Load<Texture2D>(@"Spel-filer\Plattform");
         }
     }
 }

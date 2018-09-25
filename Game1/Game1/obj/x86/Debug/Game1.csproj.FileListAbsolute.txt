@@ -49,3 +49,4 @@ C:\Users\Admin\source\repos\Bario\Game1\Game1\obj\x86\Debug\Game1.csproj.CopyCom
 C:\Users\Admin\source\repos\Bario\Game1\Game1\obj\x86\Debug\Game1.exe
 C:\Users\Admin\source\repos\Bario\Game1\Game1\obj\x86\Debug\Game1.pdb
 C:\Users\Admin\source\repos\Bario\Game1\Game1\bin\Windows\x86\Debug\Content\Spel-filer\Gubbe1.xnb
+C:\Users\Admin\source\repos\Bario\Game1\Game1\bin\Windows\x86\Debug\Content\Spel-filer\Plattform.xnb

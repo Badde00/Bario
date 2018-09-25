@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Game1
 {
@@ -12,6 +13,7 @@ namespace Game1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Spelare tim;
+        List<Bas> PLista;
         public static Viewport Viewport;
         public static GameTime GameTime;
 
@@ -34,7 +36,10 @@ namespace Game1
 
             base.Initialize();
             tim = new Spelare();
+            PLista = new List<Bas>();
             Viewport = GraphicsDevice.Viewport;
+
+            PLista.Add(new Plattform());
         }
 
         /// <summary>
@@ -83,6 +88,7 @@ namespace Game1
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             tim.Draw(spriteBatch);
+
             spriteBatch.End();
 
             // TODO: Add your drawing code here
