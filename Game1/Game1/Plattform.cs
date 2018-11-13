@@ -41,16 +41,17 @@ namespace Game1
             }
         }
 
-        public Plattform(Rectangle si, float mX, float mY, float sX,float sY, Vector2 p)
+        public Plattform(Vector2 si, float mX, float mY, float sX,float sY, Vector2 p)
         {
             tex = TexFiler.plattform;
-            si = size;
+            width = (int)si.X;
+            height = (int)si.Y;
             mX = moveSpaceX;
             mY = moveSpaceY;
             sX = speedX;
             sY = speedY;
-            p = pos;
-            p = orgPos;
+            pos = p;
+            orgPos = p;
         }
     }
 }

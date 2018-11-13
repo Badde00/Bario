@@ -5,14 +5,20 @@ using System.Collections.Generic;
 
 namespace Game1
 {
-    /// <summary>
-    /// This is the main type for your game.
-    /// </summary>
+    public enum MenuOptions
+    {
+        Options,
+        Start,
+        End,
+        InGame
+    }
+
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Spelare tim;
+        MenuOptions menuOptions = MenuOptions.Start;
         List<Bas> PLista;
         public static Viewport Viewport;
         public static GameTime GameTime;
@@ -23,23 +29,15 @@ namespace Game1
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
-
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
+        
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
             tim = new Spelare();
             PLista = new List<Bas>();
             Viewport = GraphicsDevice.Viewport;
 
-            PLista.Add(new Plattform());
+            PLista.Add(new Plattform(new Vector2(800,100), 0, 0, 0, 0, new Vector2(0, 380)));
         }
 
         /// <summary>
@@ -74,6 +72,19 @@ namespace Game1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             tim.Update();
+            if(menuOptions == MenuOptions.Start)
+            {
+                if(Keyboard.GetState().IsKeyDown(Keys.Enter))
+                {
+                    menuOptions = MenuOptions.InGame;
+                }
+            } else if (menuOptions == MenuOptions.InGame)
+            {
+                if(Keyboard.GetState().IsKeyDown(Keys.Enter))
+                {
+                    menuOptions = MenuOptions.Options;
+                }
+            }
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -88,6 +99,12 @@ namespace Game1
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             tim.Draw(spriteBatch);
+            foreach(Plattform item in PLista)
+            {
+                item.Draw(spriteBatch);
+            }
+            
+            
 
             spriteBatch.End();
 

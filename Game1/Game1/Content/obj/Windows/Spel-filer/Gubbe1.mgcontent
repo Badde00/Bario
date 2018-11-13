@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Admin/source/repos/Bario/Game1/Game1/Content/Spel-filer/Gubbe1.png</SourceFile>
-  <SourceTime>2018-09-18T09:38:21.7330465+02:00</SourceTime>
-  <DestFile>C:/Users/Admin/source/repos/Bario/Game1/Game1/Content/bin/Windows/Spel-filer/Gubbe1.xnb</DestFile>
-  <DestTime>2018-09-18T09:50:43.0438508+02:00</DestTime>
+  <SourceFile>C:/Users/Admin/source/repos/Badde00/Bario/Game1/Game1/Content/Spel-filer/Gubbe1.png</SourceFile>
+  <SourceTime>2018-11-09T13:00:48.3300469+01:00</SourceTime>
+  <DestFile>C:/Users/Admin/source/repos/Badde00/Bario/Game1/Game1/Content/bin/Windows/Spel-filer/Gubbe1.xnb</DestFile>
+  <DestTime>2018-11-13T09:16:10.0522862+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
