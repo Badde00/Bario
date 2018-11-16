@@ -11,6 +11,10 @@ namespace Game1
     class Varelser:Bas
     {
         protected Rectangle hitBox;
+        protected Rectangle hitBoxBot;
+        protected Rectangle hitBoxTop;
+        protected Rectangle hitBoxRight;
+        protected Rectangle hitBoxLeft;
         protected int hP;
         protected double speed;
 
@@ -18,6 +22,30 @@ namespace Game1
         {
             get { return hitBox; }
             set { hitBox = value; }
+        }
+
+        public Rectangle HitBoxBot
+        {
+            get { return hitBoxBot; }
+            set { hitBoxBot = value; }
+        }
+
+        public Rectangle HitBoxTop
+        {
+            get { return hitBoxTop; }
+            set { hitBoxTop = value; }
+        }
+
+        public Rectangle HitBoxRight
+        {
+            get { return hitBoxRight; }
+            set { hitBoxRight = value; }
+        }
+
+        public Rectangle HitBoxLeft
+        {
+            get { return hitBoxLeft; }
+            set { hitBoxLeft = value; }
         }
 
         public int HP

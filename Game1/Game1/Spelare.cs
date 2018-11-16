@@ -13,9 +13,19 @@ namespace Game1
         Vector2 velocity = Vector2.Zero;
         float gravity = 9.82f;
         KeyboardState lastState;
+        
         public Spelare()
         {
             tex = TexFiler.spelare;
+
+            hitBox.Height = tex.Height;
+            hitBox.Width = tex.Width;
+            hitBox.Location = pos.ToPoint();
+
+            hitBoxBot.Width = tex.Width;
+            hitBoxBot.Height = 10;
+            hitBoxBot.Location = pos.ToPoint(); //Detta är fel. Måste fixas!
+
             width = tex.Width;
             height = tex.Height;
             velocity.Y = 10;
